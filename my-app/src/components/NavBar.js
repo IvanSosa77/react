@@ -11,7 +11,7 @@ export default function NavBar(props) {
         <Navbar.Brand href="#home">
       <img
         src={props.image}
-        width="60"
+        width="50"
         height="50"
         className="d-inline-block align-top"
         alt="React Bootstrap logo"
