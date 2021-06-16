@@ -5,7 +5,7 @@ import {Navbar} from 'react-bootstrap'
 export default function NavBar(props) {
     return (
         <Navbar bg="light">
-        <Navbar.Brand href="#home">Shoes</Navbar.Brand>
+        <Navbar.Brand href="#home">Cards-Market</Navbar.Brand>
         <Navbar.Brand href="#About">About</Navbar.Brand>
         <Navbar.Brand href="#Contact">Contact</Navbar.Brand>
         <Navbar.Brand href="#home">
