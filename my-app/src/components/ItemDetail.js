@@ -9,8 +9,8 @@ function ItemDetail(props) {
                         <img src={props.image} alt="imagen"></img>
                             <div class="text">
 
-                                <h1> {props.precio}</h1>
-                                <p>link de acceso: {props.descripcion}</p>
+                                <h1> {props.nombre}</h1>
+                                <p>Especie: {props.descripcion}</p>
                                 
                             </div>
                     </article>
