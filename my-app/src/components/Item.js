@@ -3,8 +3,8 @@ import React from 'react'
 function Item(props) {
     return (
         <div>
-            <div class="container">
-            <div class="card">
+            <div className="container">
+            <div className="card">
                 <article>
                     <img src={props.image}></img>
                         <div class="text">

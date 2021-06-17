@@ -1,7 +1,18 @@
-.card{
-    margin: 80px;
+.parentElement{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    
+}
+
+.padre .card{
+    background-color: #231E23;
+    border: none;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 80px;
     align-items: center;
     grid-column-gap: 30px;
     font-family: 'Amatic SC', cursive;
@@ -20,6 +31,7 @@
 .card article:hover{
     transform: translateY(5px);
     box-shadow: 2px 2px 26px 0 rgba(0, 0, 0, 0.3);
+    background-color: #00EAD3;
 }
 
 .card article img{
@@ -45,6 +57,7 @@
 }
 
 
+
 @media (max-width: 768px){
     .card{
         grid-template-columns: repeat(2,1fr);
@@ -60,3 +73,12 @@
         text-align: center;
     }
 }
+
+
+/*<img
+        src={props.image}
+        width="50"
+        height="50"
+        className="justify-content-end"
+        alt="React Bootstrap logo"
+      />*/

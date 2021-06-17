@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import ItemDetail from './ItemDetail'
+import './main.css'
 //import img from '../assets/Ivysaur.png'
 
 
@@ -12,9 +13,9 @@ function ItemDetailContainer() {
     },[])
 
     return (
-        <div>
+        <div className="parentElement">
             {value !== null ? (value.map((val, index)=>{
-                    return <ItemDetail key ={index} id={index} image={val.image} descripcion={val.species} nombre={val.name}/>
+                    return <ItemDetail  key ={index} id={index} image={val.image} descripcion={val.species} nombre={val.name}/>
             })): <h1>Cargando página</h1>}
         </div>
     )

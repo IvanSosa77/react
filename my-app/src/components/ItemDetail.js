@@ -1,13 +1,14 @@
 import React from 'react'
 
+
 function ItemDetail(props) {
     return (
-        <div>
+        <div className="padre">
             <div className="container">
                 <div className="card">
                     <article>
                         <img src={props.image} alt="imagen"></img>
-                            <div class="text">
+                            <div className="text">
 
                                 <h1> {props.nombre}</h1>
                                 <p>Especie: {props.descripcion}</p>
