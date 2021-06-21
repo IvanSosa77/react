@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import ItemDetail from './ItemDetail'
-import './main.css'
+import './DetailContainer.css'
 //import img from '../assets/Ivysaur.png'
 
 

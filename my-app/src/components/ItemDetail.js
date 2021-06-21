@@ -2,6 +2,10 @@ import React from 'react'
 
 
 function ItemDetail(props) {
+
+    function getCartItems(){
+        alert("se envio el producto al carrito")
+    }
     return (
         <div className="padre">
             <div className="container">
@@ -12,6 +16,7 @@ function ItemDetail(props) {
 
                                 <h1> {props.nombre}</h1>
                                 <p>Especie: {props.descripcion}</p>
+                                <button className="btn" onClick={getCartItems}>Comprar</button>
                                 
                             </div>
                     </article>

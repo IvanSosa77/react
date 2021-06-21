@@ -1,23 +1,20 @@
 import React from 'react'
-import {Navbar,Nav} from 'react-bootstrap'
+import './NavBar.css'
+import {Link, NavLink} from 'react-router-dom'
 
+function NavBar(props) {
+  return (
+    <header>
+      <nav>
+      <ul className="nav__links">
+                    <li><Link exact to="/">Home</Link></li>
+                    <li><Link to="/Products">products</Link></li>
+                    <li><Link to="/About">About</Link></li>
+                    <img src={props.image} alt="logo" className="img"></img>
+                </ul>
+      </nav>
+    </header>
+  )
+}
 
-export default function NavBar(props) {
-    return (
-      <Navbar bg="light">
-      <Navbar.Brand href="#home">Cards-Market</Navbar.Brand>
-      <Navbar.Brand href="#About">About</Navbar.Brand>
-      <Navbar.Brand href="#Contact">Contact</Navbar.Brand>
-      <Navbar.Brand href="#home">
-    <img
-      src={props.image}
-      width="50"
-      height="50"
-      className="d-inline-block align-top"
-      alt="React Bootstrap logo"
-    />
-  </Navbar.Brand>
-    </Navbar>
-      
-    )
-} 
+export default NavBar

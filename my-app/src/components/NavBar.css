@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+.img{
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+
+.img:hover{
+    transform: rotateY(10deg);
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav__links  li a{
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav__links a{
+    transition: all 0.3s ease 0.1s;
+    color: white;
+}
+
+.nav__links a:hover{
+    color: #0088a9;
+    
+}

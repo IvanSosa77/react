@@ -1,3 +1,7 @@
+.selected{
+    color: red;
+}
+
 .parentElement{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -45,15 +49,17 @@
 }h3{
     text-transform: uppercase;
 }button{
-    background-color: #ef6f6c;
+    background-color: #1111;
     border-radius: 20px;
     border: none;
-    color: #fff;
+    color: black;
     padding: 10px;
     width: 100%;
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
+}button:hover{
+    background-color: #EEF87B;
 }
 
 
