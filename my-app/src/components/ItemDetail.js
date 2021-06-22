@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemCount from '../components/ItemCounter'
 
 
 function ItemDetail(props) {
@@ -16,6 +17,7 @@ function ItemDetail(props) {
 
                                 <h1> {props.nombre}</h1>
                                 <p>Especie: {props.descripcion}</p>
+                                <ItemCount/>
                                 <button className="btn" onClick={getCartItems}>Comprar</button>
                                 
                             </div>

@@ -19,7 +19,7 @@ function AppRouters() {
         <Switch>
             <Route exact path="/" component={Home}></Route>
             <Route path="/About" component={About}></Route>
-            <Route path="/:id" component={Products}></Route>
+            <Route path="/Products/:id" component={Products}></Route>
             <Route path="*"> Page not found, please click in Home</Route>
             </Switch>
         </Router>

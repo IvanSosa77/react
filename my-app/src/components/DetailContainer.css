@@ -1,6 +1,19 @@
-.selected{
-    color: red;
+.dadCounter{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
 }
+
+.dadCounter button{
+    width: 15px;
+}
+
+.dadCounter p{
+    font-size: 20px;
+    margin: 15px;
+}
+
+
 
 .parentElement{
     display: grid;
