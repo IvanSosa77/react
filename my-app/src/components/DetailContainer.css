@@ -48,7 +48,7 @@
 .card article:hover{
     transform: translateY(5px);
     box-shadow: 2px 2px 26px 0 rgba(0, 0, 0, 0.3);
-    background-color: #00EAD3;
+    background-color: #00ffff;
 }
 
 .card article img{
@@ -73,8 +73,16 @@
     cursor: pointer;
 }button:hover{
     background-color: #EEF87B;
+    font-size: 25px;
 }
 
+
+
+
+.btn:hover{
+    background-color: #EEF87B;
+    font-size: 25px;
+}
 
 
 @media (max-width: 768px){
