@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemDetailContainer from '../components/ItemDetailContainer'
+import ItemListContainer from '../components/ItemListContainer'
 import {useParams} from 'react-router-dom'
 
 function Products() {
@@ -9,7 +9,7 @@ function Products() {
     return (
         <div>
             {products}
-            <ItemDetailContainer/>
+            <ItemListContainer/>
             
         </div>
     )

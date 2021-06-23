@@ -1,24 +1,28 @@
-import React, {useState, useEffect} from 'react'
-import ItemList from './ItemList'
+import React, { useState, useEffect } from "react";
+import ItemDetail from "./ItemDetail";
+import "./DetailContainer.css";
+//import Products from "../Pages/Products";
+//import img from '../assets/Ivysaur.png'
 
+function ItemListContainer() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch("https://api.mercadolibre.com/sites/MLA/search?category=MLA1055")
+      .then((res) => res.json())
+      .then((res) => {
+        setProducts(res.results);
+      });
+  }, []);
 
-
-const getItems = () => { 
-    return new Promise((resolve)=>{
-        setTimeout(()=>{resolve({
-            title:"Zapatillas",
-            price: 25.5,
-            description: "Un par de colección",
-            img:""
-        })},2000)
-    })
+  return (
+    <div className="parentElement">
+      {
+        products.map((products,index)=>{return(
+          <ItemDetail key={index } id={products.id} image={products.thumbnail} name={products.title} precio={products.price}  stock={products.available_quantity}/>
+        )})
+      }
+    </div>
+  );
 }
-export default function ItemDetailContainer() {
-    const [item, setItem] = useState(null)
-    useEffect(() => {
-        getItems().then((res)=> setItem(res))
-        return;
-    }, [])
-    
-    return <ItemList item={item} />
-    }
+
+export default ItemListContainer;
