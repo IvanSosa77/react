@@ -2,7 +2,11 @@ import React from 'react'
 import ItemCount from '../components/ItemCounter'
 
 
+
 function Details(props) {
+
+
+
     return (
         <div>
             {props !== undefined ? <div className="padre">
@@ -17,7 +21,7 @@ function Details(props) {
                                 <p>Stock: {props.props.available_quantity}</p>
                                 <p>Description</p>
                                 <ItemCount stock={props.props.available_quantity}/>
-                                <button className="btn">Comprar</button>
+                                
                                 
                             </div>
                     </article>
