@@ -52,7 +52,7 @@
 }
 
 .card article img{
-    width: 100%;
+    width: 50%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -74,6 +74,10 @@
 }button:hover{
     background-color: #FBE3E3;
     font-size: 25px;
+}
+
+.text h1{
+    font-size: 30px;
 }
 
 
@@ -100,3 +104,8 @@
         text-align: center;
     }
 }
+
+
+html{
+    background-color: #231E23;
+  }
