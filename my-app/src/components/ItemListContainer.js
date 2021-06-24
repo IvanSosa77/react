@@ -18,7 +18,7 @@ function ItemListContainer() {
     <div className="parentElement">
       {
         products.map((products,index)=>{return(
-          <ItemDetail key={index } id={products.id} image={products.thumbnail} name={products.title} precio={products.price}  stock={products.available_quantity}/>
+          <ItemDetail key={index } id={products.id} image={products.thumbnail} name={products.title} precio={products.price} />
         )})
       }
     </div>

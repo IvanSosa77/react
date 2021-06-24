@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemCount from '../components/ItemCounter'
+
 import {Link} from 'react-router-dom'
 
 
@@ -16,9 +16,9 @@ function ItemDetail(props) {
 
                                 <Link to={props.id}><h1> {props.name}</h1></Link>
                                 <p>${props.precio}</p>
-                                <p>Disponibles: {props.stock}</p>
-                                <ItemCount/>
-                                <button className="btn">Comprar</button>
+                                
+                                
+                                
                                 
                             </div>
                     </article>
