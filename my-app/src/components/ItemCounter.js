@@ -29,7 +29,7 @@ function ItemCounter({stock}) {
             <p>{value}</p>
             <button onClick={handelDec} >-</button>
             <div id="comprar">
-                <button id="btn2" disabled={value<=0} onClick={handelAdd}>comprar</button>
+                <button id="btn2" disabled={value<=0}  onClick={handelAdd}>comprar</button>
             </div>
         </div>
     )

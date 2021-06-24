@@ -7,7 +7,7 @@ import "./DetailContainer.css";
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://api.mercadolibre.com/sites/MLA/search?category=MLA1055")
+    fetch("https://api.mercadolibre.com/sites/MLA/search?category=MLA1648 ")
       .then((res) => res.json())
       .then((res) => {
         setProducts(res.results);
