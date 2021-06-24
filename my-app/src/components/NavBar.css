@@ -35,5 +35,6 @@ header{
 
 .nav__links a:hover{
     color: #0088a9;
+    font-size: 25px;
     
 }

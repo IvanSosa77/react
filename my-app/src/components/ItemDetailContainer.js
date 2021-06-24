@@ -14,7 +14,7 @@ function ItemDetailContainer() {
     fetch(`https://api.mercadolibre.com/items/${product_id}?include_attributes-all`)
     .then(res => res.json())
     .then(res =>{setProdu(res)})
-  },[useParams])
+  },[product_id])
 
 
   return (

@@ -14,11 +14,11 @@ function ItemDetail(props) {
                         <img src={props.image} alt="imagen"></img>
                             <div className="text">
 
-                                <h1> {props.name}</h1>
+                                <Link to={props.id}><h1> {props.name}</h1></Link>
                                 <p>${props.precio}</p>
-                                <p>{props.stock}</p>
+                                <p>Disponibles: {props.stock}</p>
                                 <ItemCount/>
-                                <Link className="btn" to={props.id}>Comprar</Link>
+                                <button className="btn">Comprar</button>
                                 
                             </div>
                     </article>

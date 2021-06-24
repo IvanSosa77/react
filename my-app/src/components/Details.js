@@ -8,11 +8,11 @@ function Details(props) {
             <div className="container">
                 <div className="card">
                     <article>
-                        <img src={props.thumbnail} alt="imagen"></img>
+                        <img src={props.props.thumbnail} alt="imagen"></img>
                             <div className="text">
 
-                                <h1> {props.title}</h1>
-                                <p>${props.price}</p>
+                                <h1> {props.props.title}</h1>
+                                <p>${props.props.price}</p>
                                 <p>Description</p>
                                 
                             </div>

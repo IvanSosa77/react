@@ -5,7 +5,7 @@
 }
 
 .dadCounter button{
-    width: 15px;
+    width: 30px;
 }
 
 .dadCounter p{
@@ -32,11 +32,11 @@
     margin: 80px;
     align-items: center;
     grid-column-gap: 30px;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Playfair Display', serif;
 }
 
 .card article{
-    background-color: #eee5e9;
+    background-color: #FFFFFF;
     border: none;
     box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
     border-radius: 20px;
@@ -48,7 +48,7 @@
 .card article:hover{
     transform: translateY(5px);
     box-shadow: 2px 2px 26px 0 rgba(0, 0, 0, 0.3);
-    background-color: #00ffff;
+    background-color: #FFFFFF;
 }
 
 .card article img{
@@ -72,7 +72,7 @@
     text-transform: uppercase;
     cursor: pointer;
 }button:hover{
-    background-color: #EEF87B;
+    background-color: #FBE3E3;
     font-size: 25px;
 }
 
@@ -80,7 +80,7 @@
 
 
 .btn:hover{
-    background-color: #EEF87B;
+    background-color: #FBE3E3;
     font-size: 25px;
 }
 
