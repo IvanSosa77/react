@@ -1,36 +1,47 @@
-import React from 'react';
-
-const objetos = [{
-    name:"ivan",
-    apellido :"sosa",
-    profesion : "Dev",
-}]
+import React from 'react'
+import {useState} from 'react';
 
 
-function Promesa(){
-const prome = new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        const error = Math.random() > 0.85;
-        if(!error){
-            resolve(objetos);
-        }else{
-            reject("hubo un error en la carga")
-        }
+function Promesa() {
+
+    const [valor,setValor]=useState(null)
+
+    const array =[{
+        name:"ivan",
+        apellido: "sosa",
+        edad:"21",
+    },{
+        name:"Daniel",
+        apellido:"sosa",
+        edad:"22",
+    }]
+
+    let promesa = new Promise((resolve,rejected)=>{
+        setTimeout(()=>{
+                const error = false;
+                if(!error){
+                    resolve(array);
+                }rejected("error en la carga")
+        },1000)
     })
-},500)
 
-prome.then((res)=>{
-    console.log(res)
-}).catch((err)=>{
-    console.log(err);
-})
+    promesa.then((res)=>{
+        setValor(res);
+    }).catch((res)=>{res.console.log("error")})
 
 
-        return(
-            <div>
-                <h1></h1>
-            </div>
-        )
+
+    return (
+        <div>
+
+        {valor === null ? (<h2>error</h2>):(valor.map((index,value)=>{
+            return(
+                <h1 key={index}>hola</h1>
+            )
+        }))}
+            
+        </div>
+    )
 }
 
-export default Promesa;
+export default Promesa

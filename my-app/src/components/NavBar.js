@@ -10,7 +10,7 @@ function NavBar(props) {
                     <li><Link exact to="/">Home</Link></li>
                     <li><Link to="/Products">products</Link></li>
                     <li><Link to="/About">About</Link></li>
-                    <img src={props.image} alt="logo" className="img"></img>
+                    <Link to="/Carrito"><img src={props.image} alt="carrito" className="img" ></img></Link>
                 </ul>
       </nav>
     </header>
