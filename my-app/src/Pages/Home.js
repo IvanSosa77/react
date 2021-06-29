@@ -3,8 +3,11 @@ import React from 'react'
 
 function Home() {
     return (
-        <div>
-            <h1>Bienvenidos a mi Compumundo </h1>
+        <div className="Home">
+            <h1>Bienvenidos a TechnoHouse </h1>
+            <div>
+                <p>para hacer una compra haz click en productos!</p>
+            </div>
         </div>
     )
 }

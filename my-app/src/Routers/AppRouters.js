@@ -1,40 +1,35 @@
-import React from 'react'
+import React from "react";
 
-import Home from '../Pages/Home'
-import About from '../Pages/About'
-import Products from '../Pages/Products'
-import Carrito from '../Pages/Carrito'
-import NavBar from '../components/NavBar'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import image from '../assets/carro.png';
-import {CartContext} from '../components/CartContext';
-
-
-
-import {BrowserRouter as Router, Route,Switch} from 'react-router-dom'
-import ItemDetailContainer from '../components/ItemDetailContainer'
-
+import Home from "../Pages/Home";
+import About from "../Pages/About";
+import Products from "../Pages/Products";
+import Carrito from "../Pages/Carrito";
+import NavBar from "../components/NavBar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import image from "../assets/carro.png";
+import { CartContext } from "../components/CartContext";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ItemDetailContainer from "../components/ItemDetailContainer";
 
 function AppRouters() {
-
-    return (
-        <CartContext>
-            <Router>
-            <NavBar image={image} />
+  return (
+    <CartContext>
+      <Router>
+        <NavBar image={image} />
         <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route path="/About" component={About}></Route>
-            <Route path="/Products" component={Products}></Route>
-            <Route exact path="/:product_id">
-                <ItemDetailContainer/>
-            </Route>
-            
-            <Route path="*"> Page not found, please click in Home</Route>
-            <Route path="/carrito" component={Carrito}></Route>
-            </Switch>
-        </Router>
-        </CartContext>
-    )
+          <Route exact path="/" component={Home}></Route>
+          <Route path="/About" component={About}></Route>
+          <Route path="/Products" component={Products}></Route>
+          <Route path="/carrito" component={Carrito}></Route>
+          <Route exact path="/:product_id">
+            <ItemDetailContainer />
+          </Route>
+
+          <Route path="*"> Page not found, please click in Home</Route>
+        </Switch>
+      </Router>
+    </CartContext>
+  );
 }
 
-export default AppRouters
+export default AppRouters;

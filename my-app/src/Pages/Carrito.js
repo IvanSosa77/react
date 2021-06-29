@@ -1,15 +1,23 @@
-import React from 'react'
-
-
+import React, { useContext } from "react";
+import { orderContext } from "../components/CartContext";
+import ItemCart from "../components/ItemCart";
 function Carrito() {
+  const order = useContext(orderContext);
 
-    
-    return (
-        <div>
-            <h1>Hola</h1>
-        </div>
-    )
+  return (
+    <div className="carrito">
+      {order.map((item) => {
+        return (
+          <ItemCart
+            
+            nombre={item.nombre}
+            precio={item.precio}
+            cantidad={item.cantidad}
+          />
+        );
+      })}
+    </div>
+  );
 }
 
-
-export default Carrito
+export default Carrito;
