@@ -15,20 +15,23 @@ function AppRouters() {
   return (
     <CartContext>
       <Router>
-        <NavBar image={image} />
+      
+      <NavBar image={image} />
         <Switch>
           <Route exact path="/" component={Home}></Route>
-          <Route path="/About" component={About}></Route>
-          <Route path="/Products" component={Products}></Route>
-          <Route path="/carrito" component={Carrito}></Route>
-          <Route exact path="/:product_id">
+          <Route exact path="/About" component={About}></Route>
+          <Route exact path="/Products" component={Products}></Route>
+          <Route exact path="/carrito" component={Carrito}></Route>
+          <Route  path="/:product_id">
             <ItemDetailContainer />
           </Route>
 
           <Route path="*"> Page not found, please click in Home</Route>
         </Switch>
+        
       </Router>
-    </CartContext>
+      </CartContext>
+    
   );
 }
 

@@ -10,14 +10,17 @@ export const orderUpdateContext = React.createContext();
 export function CartContext({children}) {
 
     const [order, setOrder]=useState([]);
-    const insertOrder = (name,price,cantidad)=>{
 
+
+    const insertOrder = (name,price,cantidad,id,image)=>{
         let tmp = {
+            id: id,
             nombre: name,
             precio : price,
-            cantidad: cantidad
+            cantidad: cantidad,
+            image: image
         }
-        let temp = order;
+        let temp = [...order];
         temp.push(tmp)
         return  setOrder(temp);
     }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ItemDetail(props) {
+function  ItemDetail(props) {
   return (
     <div className="padre">
       <div className="container">

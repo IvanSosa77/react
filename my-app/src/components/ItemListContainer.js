@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import "./DetailContainer.css";
-//import Products from "../Pages/Products";
-//import img from '../assets/Ivysaur.png'
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
@@ -18,7 +16,7 @@ function ItemListContainer() {
     <div className="parentElement">
       {
         products.map((products,index)=>{return(
-          <ItemDetail key={index } id={products.id} image={products.thumbnail} name={products.title} precio={products.price} />
+          <ItemDetail key={index} id={products.id} image={products.thumbnail} name={products.title} precio={products.price} />
         )})
       }
     </div>
