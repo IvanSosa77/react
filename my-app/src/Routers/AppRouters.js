@@ -15,7 +15,6 @@ function AppRouters() {
   return (
     <CartContext>
       <Router>
-      
       <NavBar image={image} />
         <Switch>
           <Route exact path="/" component={Home}></Route>

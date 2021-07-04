@@ -4,15 +4,16 @@ import { orderUpdateContext } from "../components/CartContext";
 import { orderContext } from "../components/CartContext";
 
 
+
 function Details(props) {
     const [counter, setCounter] = useState(0);
     const order = useContext(orderContext);
-    const addNewItem = useContext(orderUpdateContext);
+    const {insertOrder} = useContext(orderUpdateContext);
 
     function addItem (){
         const checkIndex = order.findIndex((element)=>element.id === props.props.id);
         if(checkIndex === -1){
-            addNewItem(
+          insertOrder(
                 props.props.title,
                 props.props.price,
                 counter,
