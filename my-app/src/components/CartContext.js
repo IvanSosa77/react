@@ -15,6 +15,7 @@ export function CartContext({ children }) {
       image: image,
       total : total,
       
+      
     };
     let temp = [...order];
     temp.push(tmp);

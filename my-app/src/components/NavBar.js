@@ -7,8 +7,18 @@ function NavBar(props) {
   const order = useContext(orderContext);
 
   const disabled = {
-    width: order <= 0 ? '0px': '40px'
+    width: order <= 0 ? '0px': '45px'
   }
+
+const ocultar= {
+  color: order <=0 ? '#231E23': '#FFFFFF'
+}
+
+//const color = {
+  //color : 'white',
+//}
+
+const acumulador = order.reduce((acu,element)=>acu + element.cantidad,0)
 
   return (
     <header>
@@ -18,6 +28,7 @@ function NavBar(props) {
                     <li><Link to="/Products">products</Link></li>
                     <li><Link to="/About">About</Link></li>
                     <Link to="/Carrito" ><img src={props.image} alt="carrito" className="img" style={disabled}></img></Link>
+                    <li style={ocultar}>{acumulador}</li>
                 </ul>
       </nav>
     </header>
