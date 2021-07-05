@@ -18,7 +18,7 @@ function Details(props) {
                 props.props.price,
                 counter,
                 props.props.id,
-                props.props.thumbnail
+                props.props.thumbnail,
               )
         }else{
             order[checkIndex].cantidad = order[checkIndex].cantidad + counter 
@@ -57,8 +57,8 @@ function Details(props) {
                   />
                   <button
                     id="btn2"
-                    onClick={addItem}
->
+                    onClick={addItem} disabled={counter <= 0}>
+                    
                     comprar
                   </button>
                 </div>
