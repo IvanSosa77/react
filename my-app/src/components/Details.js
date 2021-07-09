@@ -18,7 +18,7 @@ function Details(props) {
                 props.props.price,
                 counter,
                 props.props.id,
-                props.props.thumbnail,
+                props.props.img,
               )
         }else{
             order[checkIndex].cantidad = order[checkIndex].cantidad + counter 
@@ -44,12 +44,11 @@ function Details(props) {
           <div className="container">
             <div className="card">
               <article>
-                <img src={props.props.thumbnail} alt="imagen"></img>
+                <img src={props.props.img} alt="imagen"></img>
                 <div className="text">
                   <h1> {props.props.title}</h1>
                   <p>${props.props.price}</p>
-                  <p>Stock: {props.props.available_quantity}</p>
-                  <p>Description</p>
+                  <p>Stock: {props.props.description}</p>
                   <ItemCount
                     suma={handelInc}
                     resta={handelDec}

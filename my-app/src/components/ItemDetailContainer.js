@@ -2,23 +2,32 @@ import React from 'react'
 import Detail from './Details'
 import {useParams} from 'react-router-dom'
 import {useEffect,useState} from 'react';
+import {getFirestore} from '../App';
 
 function ItemDetailContainer() {
 
   const [produ,setProdu] = useState([])
 
-  let {product_id} = useParams()
-  
+  let {product_id} = useParams(); 
+  console.log(product_id)
+  const db = getFirestore();
+  const itemCollection = db.collection("items");
+  const itemId = itemCollection.where('id','==',product_id)
 
   useEffect(()=>{
-    fetch(`https://api.mercadolibre.com/items/${product_id}?include_attributes-all`)
-    .then(res => res.json())
-    .then(res =>{setProdu(res)})
+    itemId.get().then((querySnapshot)=>{
+      if(querySnapshot.size === 0){
+        console.log('No results');
+      }
+      const temp = querySnapshot.docs.map(doc => doc.data())
+      setProdu(temp[0])
+    })
   },[product_id])
 
 
   return (
     <div>
+          {console.log(produ.title)}
         <Detail props={produ}/>
     </div>
   )
