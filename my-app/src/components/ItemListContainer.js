@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getFirestore } from "../App";
+import { getFirestore } from "../components/Firebase";
 import ItemDetail from "./ItemDetail";
 import "./DetailContainer.css";
 
@@ -34,7 +34,7 @@ function ItemListContainer() {
     
       {
         products.map((products,index)=>{return(
-          <ItemDetail key={index} id={products.id} image={products.img} name={products.title} precio={products.price} description={products.description} />
+          <ItemDetail key={index} id={products.id} image={products.img} name={products.title} precio={products.price} description={products.description} stock={products.available_quantity} />
           
         )})
       }

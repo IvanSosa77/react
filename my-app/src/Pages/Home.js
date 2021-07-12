@@ -1,13 +1,13 @@
 import React from 'react'
-//import ItemListContainer from '../components/ItemListContainer'
-
+import image from '../assets/banner.jpg'
 function Home() {
     return (
         <div className="Home">
-            <h1>Bienvenidos a TechnoHouse </h1>
-            <div>
-                <p>para hacer una compra haz click en productos!</p>
-            </div>
+        <header id="header__tip"> 
+                <h1>Welcome to SneakerHouse </h1>
+                <p>Since 1992 - NewYork</p>
+                <img src={image} alt="banner"></img>
+        </header>
         </div>
     )
 }

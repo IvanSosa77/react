@@ -1,3 +1,28 @@
+#header__tip{
+    font-family: 'Playfair Display', serif;
+}
+
+#header__tip img:hover{
+    box-shadow: 5px 5px 6px 0 rgba(245, 245, 248, 0.3);
+
+}
+
+
+.about h1{
+    color: #FFFF;
+}
+.about p{
+    color: #FFFF;
+}
+
+
+.about img{
+    margin: 5%;
+}
+
+
+
+
 .dadCounter{
     display: flex;
     justify-content: center;
@@ -14,77 +39,138 @@
     margin: 15px;
 }
 
+#parra{
+    color: white;
+}
 
-
+/*ACA EMPIEZA ESTILO DE ITEM DETAIL */
 
 .parentElement{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .padre .card{
     background-color: #231E23;
     border: none;
+    height: 400px;
 }
 
 .card{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin: 80px;
+    margin: 50px;
     align-items: center;
-    grid-column-gap: 30px;
     font-family: 'Playfair Display', serif;
 }
 
 .card article{
     background-color: #FFFFFF;
     border: none;
-    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 6px 0 rgba(255, 0, 0, 0.3);
     border-radius: 20px;
-    text-align: center;
     width: 400px;
+    height: 100%;
     transition: transform .3s;
 }
 
 .card article:hover{
     transform: translateY(5px);
-    box-shadow: 2px 2px 26px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 26px 0 rgba(255, 0, 0, 0.3);
     background-color: #FFFF;
 }
 
 .card article img{
     width: 50%;
+    height: 40%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card article p{
+    margin: 50px 50px ;
+    font-size: 20px;
+}
+/*TERMINA ESTILO DE ITEM DETAIL*/
+
+
+
+/*DETAIL*/
+.padre .cardTwo{
+    background-color: #231E23;
+    border: none;
+    height: auto;
+}
+
+.cardTwo{
+    margin: 50px;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.cardTwo article{
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: 2px 2px 6px 0 rgba(255, 0, 0, 0.3);
+    border-radius: 20px;
+    width: 400px;
+    height: 100%;
+    transition: transform .3s;
+}
+
+.cardTwo article img{
+    width: 50%;
+    height: 40%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
 
+
+.dadCounter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px 20px 20px 125px;
+}
+
+
+.dadCounter button:hover{
+    background-color: #A8DADC;
+    color: #000000;
+
+}
+
+#btn2{
+    width: 100%;
+}
+#btn2:hover{
+    background-color: #A8DADC;
+    color: #000000;
+    cursor: pointer;
+}
+
+
 .text{
-    padding: 20px;
-    border-top: 1px solid black;
-    
-}h3{
-    text-transform: uppercase;
+    padding: 5px;
     
 }button{
-    background-color: #1111;
-    border-radius: 20px;
+    color: #000000;
     border: none;
-    color: black;
     padding: 10px;
     width: 100%;
     font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-}button:hover{
-    background-color: #FBE3E3;
+    
 }
-
 
 .text h1{
     font-size: 30px;
 }
+
+/*TERMINA DETAIL*/
+
+
+
 
 
 
@@ -105,12 +191,71 @@
 }
 
 
-.dadCounter #btn2{
+
+
+.carrito{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin: 0px 40%;
+    border-radius: 2%;
+    background: #FFFF;
     
+    
+}
+
+
+
+.itemCart img{
+    width: 30%;
+    margin: 5px;
+}button:hover{
+        background-color:#C80808;
+        color: black;
+    }   
+
+
+
+.formu{
+    margin: 10px;
+    border: none;
+    background: #F2EDED;
+    
+}
+
+
+
+/*
+.itemCart{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFF;
+    margin: 50px;
+    border-radius: 20px;
+}
+.itemCart p{
+    background-color: #FFFF;
+    color: black;
+    font-weight: 600;
+    height: auto;
+}
+
+.itemCart img{
+    width: 100%;
+}
+
+.carrito{
+    margin: 0 600px;
+    width: 20%;
+    height: 100%;
+}
+*/
+
+.Home{
+    color: #FFF;
     
 }
 
@@ -118,35 +263,8 @@
     width: 50%;
 }
 
-#btn2{
-    width: 100%;
-}
 
 
 html{
     background-color: #231E23;
-}
-
-
-
-.itemCart{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    margin: 50px;
-    border-radius: 20px;
-}
-.itemCart p{
-    color: black;
-    font-weight: 600;
-}
-
-.carrito{
-    margin: 0 600px;
-}
-
-
-.Home{
-    color: #FFF;
-    
 }

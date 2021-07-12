@@ -15,7 +15,7 @@ function ItemCart(props) {
       <img src={props.image} alt="imageCarro"></img>
       <p>{props.nombre}</p>
       <p>${props.precio} x unidad</p>
-      <p>total: $ {props.total}</p>
+      <p>total: USD {props.total}</p>
       <p>cantidad: {props.cantidad}</p>
       <button onClick={()=>deleteItem(props.index)}>Eliminar</button>
     </div>

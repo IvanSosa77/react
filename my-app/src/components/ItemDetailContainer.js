@@ -2,7 +2,7 @@ import React from 'react'
 import Detail from './Details'
 import {useParams} from 'react-router-dom'
 import {useEffect,useState} from 'react';
-import {getFirestore} from '../App';
+import {getFirestore} from '../components/Firebase';
 
 function ItemDetailContainer() {
 
@@ -26,7 +26,7 @@ function ItemDetailContainer() {
 
 
   return (
-    <div>
+    <div className="parentElement">
           
         <Detail props={produ}/>
     </div>

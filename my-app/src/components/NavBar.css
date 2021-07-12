@@ -31,12 +31,12 @@ header{
     font-size: 20px;
 }
 .nav__links a{
-    transition: all 0.3s ease 0.1s;
+    transition: all 0.1s ease 0.1s;
     color: white;
 }
 
 .nav__links a:hover{
-    color: #0088a9;
+    color: #EF3A5D;
     font-size: 25px;
     
 }

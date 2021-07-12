@@ -42,7 +42,7 @@ function Details(props) {
       {props !== undefined ? (
         <div className="padre">
           <div className="container">
-            <div className="card">
+            <div className="cardTwo">
               <article>
                 <img src={props.props.img} alt="imagen"></img>
                 <div className="text">

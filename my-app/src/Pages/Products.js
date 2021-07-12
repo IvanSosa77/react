@@ -8,6 +8,7 @@ function Products() {
 
     return (
         <div>
+        <p id="parra">Our collection for you</p>
             {products}
             <ItemListContainer/>
             

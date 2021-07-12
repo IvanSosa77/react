@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { orderContext } from "../components/CartContext";
 import ItemCart from "../components/ItemCart";
 import { Link } from "react-router-dom";
-import { getFirestore } from "../App";
+import { getFirestore } from "../components/Firebase";
 
 function Carrito() {
   const order = useContext(orderContext);
@@ -60,10 +60,12 @@ function Carrito() {
               />
             );
           })}
-
-          <input placeholder="nombre" onChange={getBuyer} requiered></input>
-          <input placeholder="apellido" onChange={getBuyer} requiered></input>
-          <input placeholder="cellPhone" onChange={getBuyer} requiered></input>
+          
+          <input placeholder="nombre" onChange={getBuyer} className="formu" requiered></input>
+          <input placeholder="apellido" onChange={getBuyer} className="formu" requiered></input>
+          <input placeholder="cellPhone" onChange={getBuyer} className="formu" requiered></input>
+          
+          
           {!buyer.name || !buyer.surname || !buyer.phone ? (
             <button onClick={() => sendBuy(pedidos)} disabled>
               Finalizar compra

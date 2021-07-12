@@ -12,7 +12,8 @@ function  ItemDetail(props) {
               <Link to={props.id}>
                 <h1> {props.name}</h1>
               </Link>
-              <p>${props.precio}</p>
+              <p>stock {props.stock}</p>
+              <p>USD {props.precio}</p>
             </div>
           </article>
         </div>
