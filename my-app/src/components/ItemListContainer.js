@@ -31,7 +31,7 @@ function ItemListContainer() {
 
   return (
     <div className="parentElement">
-    {console.log(load)}
+    
       {
         products.map((products,index)=>{return(
           <ItemDetail key={index} id={products.id} image={products.img} name={products.title} precio={products.price} description={products.description} />

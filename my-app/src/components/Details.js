@@ -48,7 +48,7 @@ function Details(props) {
                 <div className="text">
                   <h1> {props.props.title}</h1>
                   <p>${props.props.price}</p>
-                  <p>Stock: {props.props.description}</p>
+                  <p> {props.props.description}</p>
                   <ItemCount
                     suma={handelInc}
                     resta={handelDec}

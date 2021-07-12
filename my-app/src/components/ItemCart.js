@@ -17,8 +17,9 @@ function ItemCart(props) {
       <p>${props.precio} x unidad</p>
       <p>total: $ {props.total}</p>
       <p>cantidad: {props.cantidad}</p>
-      <button onClick={()=>deleteItem(props.index)}>borrar</button>
+      <button onClick={()=>deleteItem(props.index)}>Eliminar</button>
     </div>
+      
   );
 }
 

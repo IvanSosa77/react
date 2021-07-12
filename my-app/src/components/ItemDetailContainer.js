@@ -9,7 +9,7 @@ function ItemDetailContainer() {
   const [produ,setProdu] = useState([])
 
   let {product_id} = useParams(); 
-  console.log(product_id)
+  
   const db = getFirestore();
   const itemCollection = db.collection("items");
   const itemId = itemCollection.where('id','==',product_id)
@@ -27,7 +27,7 @@ function ItemDetailContainer() {
 
   return (
     <div>
-          {console.log(produ.title)}
+          
         <Detail props={produ}/>
     </div>
   )
