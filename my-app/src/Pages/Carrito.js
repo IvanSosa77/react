@@ -1,52 +1,46 @@
-import React, { useState, useContext,useEffect} from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { orderContext } from "../components/CartContext";
 import ItemCart from "../components/ItemCart";
 import { Link } from "react-router-dom";
 import { getFirestore } from "../App";
 
 function Carrito() {
-  const order = useContext(orderContext);  
-  const [buyer, setBuyer]=useState({});
-  const [pedidos, setPedidos] = useState()
+  const order = useContext(orderContext);
+  const [buyer, setBuyer] = useState({});
+  const [pedidos, setPedidos] = useState();
 
-  
-  
   function sendBuy(pedidos) {
     const db = getFirestore();
     const orders = db.collection("orders");
-    console.log(pedidos)
     orders
       .add(pedidos)
       .then(({ id }) => {
-        console.log("se registro")      })
+        console.log("se registro");
+      })
       .catch((e) => {
         console.log(e);
       })
       .finally(console.log("proceso finalizado"));
   }
 
-
-  function getBuyern(event){
-    let temp = {...buyer}
-    if(event.target.attributes.placeholder.nodeValue === "nombre"){
+  function getBuyer(event) {
+    let temp = { ...buyer };
+    if (event.target.attributes.placeholder.nodeValue === "nombre") {
       let nombre = event.target.value;
-      temp.name = nombre ; 
-    }else if(event.target.attributes.placeholder.nodeValue === "apellido"){
+      temp.name = nombre;
+    } else if (event.target.attributes.placeholder.nodeValue === "apellido") {
       let apellido = event.target.value;
       temp.surname = apellido;
-    }else{
+    } else {
       let telefono = event.target.value;
       temp.phone = telefono;
     }
     setBuyer(temp);
-    return console.log(temp);
   }
 
-  useEffect(()=>{
-    setPedidos({buyer: buyer, orders:order})
-  },[buyer,order])
-  
-  
+  useEffect(() => {
+    setPedidos({ buyer: buyer, orders: order });
+  }, [buyer, order]);
 
   return (
     <>
@@ -66,11 +60,17 @@ function Carrito() {
               />
             );
           })}
-          <input placeholder="nombre" onChange={getBuyern}></input>
-          <input placeholder="apellido" onChange={getBuyern}></input>
-          <input placeholder="cellPhone" onChange={getBuyern}></input>
 
-          <button onClick={()=>sendBuy(pedidos)}>Finalizar compra</button>
+          <input placeholder="nombre" onChange={getBuyer} requiered></input>
+          <input placeholder="apellido" onChange={getBuyer} requiered></input>
+          <input placeholder="cellPhone" onChange={getBuyer} requiered></input>
+          {!buyer.name || !buyer.surname || !buyer.phone ? (
+            <button onClick={() => sendBuy(pedidos)} disabled>
+              Finalizar compra
+            </button>
+          ) : (
+            <button onClick={() => sendBuy(pedidos)}>Finalizar compra</button>
+          )}
         </div>
       ) : (
         <div>
