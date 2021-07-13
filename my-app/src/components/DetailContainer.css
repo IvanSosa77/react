@@ -42,6 +42,9 @@
 #parra{
     color: white;
 }
+#parra:hover{
+    color: brown;
+}
 
 /*ACA EMPIEZA ESTILO DE ITEM DETAIL */
 
@@ -226,7 +229,11 @@
     
 }
 
+#title__cart{
+    color: #FFFF;
+    font-family: 'Playfair Display', serif;
 
+}
 
 /*
 .itemCart{

@@ -76,7 +76,7 @@ function Carrito() {
         </div>
       ) : (
         <div>
-          <h1>El carro se encuentra vacío!</h1>
+          <h1 id="title__cart">El carro se encuentra vacío!</h1>
           <li className="nav__links">
             <Link to="/Products">ir a productos</Link>
           </li>

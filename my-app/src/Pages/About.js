@@ -8,7 +8,7 @@ function About() {
       <header>
         <section className="about">
           <p>
-          Store founded in 1992 in NewYork City by Harvey Simmons          
+          Tienda fundada en 1992 en la ciudad de New York por Harvey Simmons
           </p>
           <img src={image} alt="1992"></img>
           <img src={image2} alt="tienda"></img>
