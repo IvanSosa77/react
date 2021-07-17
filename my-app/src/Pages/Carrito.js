@@ -21,6 +21,10 @@ function Carrito() {
         console.log(e);
       })
       .finally(console.log("proceso finalizado"));
+
+      let Arr1 = order;
+          Arr1.splice(0,Arr1.length);
+      console.log(Arr1)
   }
 
   function getBuyer(event) {
@@ -67,11 +71,11 @@ function Carrito() {
           
           
           {!buyer.name || !buyer.surname || !buyer.phone ? (
-            <button onClick={() => sendBuy(pedidos)} disabled>
+            <Link to="/Products" onClick={() => sendBuy(pedidos)} disabled>
               Finalizar compra
-            </button>
+            </Link>
           ) : (
-            <button onClick={() => sendBuy(pedidos)}>Finalizar compra</button>
+            <Link to="/Products" onClick={() => sendBuy(pedidos)}>Finalizar compra</Link>
           )}
         </div>
       ) : (
